@@ -1,6 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
 
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import EmployeeListComponent from './components/EmployeeListComponent';
+import CreateEmployeeComponent from './components/CreateEmployeeComponent';
+
 function App() {
   return (
     <div className="App">
@@ -18,6 +23,17 @@ function App() {
           Learn React
         </a>
       </header>
+      <div>
+        <Router>
+          <div className="container">
+            <Routes>
+              <Route path="/" element={<EmployeeListComponent />} />
+              <Route path="/employees" element={<EmployeeListComponent />} />
+              <Route path="/add-employee" element={<CreateEmployeeComponent />} />
+            </Routes>
+          </div>
+        </Router>
+      </div>
     </div>
   );
 }
