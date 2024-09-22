@@ -26,9 +26,9 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.
 You may also see any lint errors in the console.
-
-## SpringBoot Back-End
 ---
+## SpringBoot Back-End
+
 ### Start SpringBoot back-end
 Run `./mvnw clean spring-boot:run`
 
