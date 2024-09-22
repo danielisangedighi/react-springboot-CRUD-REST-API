@@ -3,7 +3,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## React Front-End
----
+
 ### Build React front-end
 
 On a Terminal, do the following:\
@@ -13,7 +13,7 @@ Run `npx create-react-app react-crud-frontend`\
 Run `cd react-crud-frontend`\
 
 Run `npm install axios`
----
+
 ### Start React front-end
 
 On a Terminal, do the following:\
