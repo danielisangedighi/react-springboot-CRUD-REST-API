@@ -6,27 +6,27 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### Build React front-end
 
-On a Terminal, do the following:\
+On a Terminal, do the following:
 
-Run `npx create-react-app react-crud-frontend`\
+Run `npx create-react-app react-crud-frontend`
 
-Run `cd react-crud-frontend`\
+Run `cd react-crud-frontend`
 
 Run `npm install axios`
 
 ### Start React front-end
 
-On a Terminal, do the following:\
+On a Terminal, do the following:
 
 Run `npm start`
 
-This will run the app in the development mode.\
+This will run the app in the development mode.
 
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.\
----
-The page will reload when you make changes.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+The page will reload when you make changes.
 You may also see any lint errors in the console.
----
+
 ## SpringBoot Back-End
 ---
 ### Start SpringBoot back-end
