@@ -4,8 +4,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
-In the project directory, you can run:
+In the project directory (On a Terminal), you can run:
 
+## Start React front-end
+
+### `npx create-react-app react-crud-frontend`
+### `cd react-crud-frontend`
+### `npm install axios`
 ### `npm start`
 
 Runs the app in the development mode.\
@@ -13,6 +18,12 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
+
+## Start React Front-end
+
+Run `./mvnw clean spring-boot:run`
+
+### Start the Spring Boot back-end 
 
 ### `npm test`
 

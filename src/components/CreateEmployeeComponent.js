@@ -1,5 +1,14 @@
 import React, { Component } from 'react';
 import EmployeeService from '../services/EmployeeService';
+import { useNavigate } from 'react-router-dom';
+
+// Define withRouter in the same file
+function withRouter(Component) {
+    return function WithRouter(props) {
+        const navigate = useNavigate();
+        return <Component {...props} navigate={navigate} />;
+    };
+}
 
 class CreateEmployeeComponent extends Component {
     constructor(props) {
@@ -15,7 +24,9 @@ class CreateEmployeeComponent extends Component {
         e.preventDefault();
         let employee = { firstName: this.state.firstName, lastName: this.state.lastName, email: this.state.email };
         EmployeeService.createEmployee(employee).then(() => {
-            this.props.history.push('/employees');
+            this.props.navigate('/employees'); // Navigate to Employee List after saving
+        }).catch((error) => {
+            console.error('There was an error creating the employee!', error);
         });
     }
 
@@ -46,4 +57,4 @@ class CreateEmployeeComponent extends Component {
     }
 }
 
-export default CreateEmployeeComponent;
+export default withRouter(CreateEmployeeComponent); // Wrap component with withRouter

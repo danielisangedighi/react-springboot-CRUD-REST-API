@@ -5,6 +5,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import EmployeeListComponent from './components/EmployeeListComponent';
 import CreateEmployeeComponent from './components/CreateEmployeeComponent';
+import UpdateEmployeeComponent from './components/UpdateEmployeeComponent';
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
         </p>
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="https://react.dev/"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -30,6 +31,7 @@ function App() {
               <Route path="/" element={<EmployeeListComponent />} />
               <Route path="/employees" element={<EmployeeListComponent />} />
               <Route path="/add-employee" element={<CreateEmployeeComponent />} />
+              <Route path="/update-employee/:id" element={<UpdateEmployeeComponent />} />
             </Routes>
           </div>
         </Router>
