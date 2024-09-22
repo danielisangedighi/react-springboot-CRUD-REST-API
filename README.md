@@ -1,6 +1,7 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+    This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
 ---
 ## React Front-End
 
@@ -29,7 +30,7 @@ This will run the app in the development mode.
 
 ### Start SpringBoot back-end
 - Run `./mvnw clean spring-boot:run`
-
+---
 ## React Front-End Test
 - Run `npm test`
 
