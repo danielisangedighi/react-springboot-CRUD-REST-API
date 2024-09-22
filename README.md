@@ -8,8 +8,8 @@ In the project directory (On a Terminal), you can run:
 
 ## Build React front-end
 
-Run `npx create-react-app react-crud-frontend`
-Run `cd react-crud-frontend`
+Run `npx create-react-app react-crud-frontend`.\
+Run `cd react-crud-frontend`.\
 Run `npm install axios`
 
 ## Start React front-end
