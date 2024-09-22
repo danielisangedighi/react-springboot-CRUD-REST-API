@@ -5,16 +5,23 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## React Front-End
 ---
 ### Build React front-end
+
 On a Terminal, do the following:\
+
 Run `npx create-react-app react-crud-frontend`\
+
 Run `cd react-crud-frontend`\
+
 Run `npm install axios`
 ---
 ### Start React front-end
+
 On a Terminal, do the following:\
+
 Run `npm start`
 
 This will run the app in the development mode.\
+
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.\
 ---
 The page will reload when you make changes.\
