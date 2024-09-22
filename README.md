@@ -6,15 +6,20 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory (On a Terminal), you can run:
 
+## Build React front-end
+
+Run `npx create-react-app react-crud-frontend`
+Run `cd react-crud-frontend`
+Run `npm install axios`
+
 ## Start React front-end
 
-### `npx create-react-app react-crud-frontend`
-### `cd react-crud-frontend`
-### `npm install axios`
-### `npm start`
+Run `npm start`
 
-Runs the app in the development mode.\
+This will run the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+Run `npm build run`
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
