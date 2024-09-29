@@ -15,25 +15,27 @@ class EmployeeListComponent extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            employees: []
+            employees: [],
+            currentPage: 1,       // For pagination
+            recordsPerPage: 4    // Number of records per page
         };
     }
 
     // Method to handle 'Add Employee' button click
     addEmployee = () => {
-        this.props.navigate('/add-employee');  // Navigate to the add-employee page
+        this.props.navigate('/add-employee');
     }
 
     // Method to handle 'Update Employee' button click
     updateEmployee = (id) => {
-        this.props.navigate(`/update-employee/${id}`);  // Navigate to the update-employee page with employee ID
+        this.props.navigate(`/update-employee/${id}`);
     }
 
     // Method to handle 'Delete Employee' button click
     deleteEmployee = (id) => {
         EmployeeService.deleteEmployee(id).then((res) => {
-            this.setState({ 
-                employees: this.state.employees.filter(employee => employee.id !== id) 
+            this.setState({
+                employees: this.state.employees.filter(employee => employee.id !== id)
             });
         });
     }
@@ -47,7 +49,35 @@ class EmployeeListComponent extends Component {
         });
     }
 
+    // Pagination: Calculate the current records to display
+    getPaginatedEmployees() {
+        const { employees, currentPage, recordsPerPage } = this.state;
+        const indexOfLastRecord = currentPage * recordsPerPage;
+        const indexOfFirstRecord = indexOfLastRecord - recordsPerPage;
+        return employees.slice(indexOfFirstRecord, indexOfLastRecord);
+    }
+
+    // Handle next page
+    handleNextPage = () => {
+        const { currentPage, employees, recordsPerPage } = this.state;
+        if (currentPage < Math.ceil(employees.length / recordsPerPage)) {
+            this.setState({ currentPage: currentPage + 1 });
+        }
+    }
+
+    // Handle previous page
+    handlePrevPage = () => {
+        const { currentPage } = this.state;
+        if (currentPage > 1) {
+            this.setState({ currentPage: currentPage - 1 });
+        }
+    }
+
     render() {
+        const { currentPage, recordsPerPage, employees } = this.state;
+        const paginatedEmployees = this.getPaginatedEmployees();
+        const totalPages = Math.ceil(employees.length / recordsPerPage);
+
         return (
             <div>
                 <h2 className="text-center">Employee List</h2>
@@ -66,7 +96,7 @@ class EmployeeListComponent extends Component {
                         </thead>
                         <tbody>
                             {
-                                this.state.employees.map(employee => 
+                                paginatedEmployees.map(employee => 
                                     <tr key={employee.id}>
                                         <td>{employee.firstName}</td>
                                         <td>{employee.lastName}</td>
@@ -80,6 +110,25 @@ class EmployeeListComponent extends Component {
                             }
                         </tbody>
                     </table>
+                </div>
+                
+                {/* Pagination controls */}
+                <div className="pagination-controls">
+                    <button
+                        onClick={this.handlePrevPage}
+                        disabled={currentPage === 1}
+                        className="btn btn-secondary"
+                    >
+                        Previous
+                    </button>
+                    <span> Page {currentPage} of {totalPages} </span>
+                    <button
+                        onClick={this.handleNextPage}
+                        disabled={currentPage === totalPages}
+                        className="btn btn-secondary"
+                    >
+                        Next
+                    </button>
                 </div>
             </div>
         );

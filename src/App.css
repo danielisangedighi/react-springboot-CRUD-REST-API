@@ -1,9 +1,11 @@
+/* App.css */
+
 .App {
   text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 20vmin;
   pointer-events: none;
 }
 
@@ -15,7 +17,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 20vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,4 +37,195 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* New CSS for the Router part */
+
+.container {
+  width: flex;
+  margin: auto;
+  padding: 10px;
+  background-color: #414753;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  color: whitesmoke;
+  table-layout: auto;
+  height: auto;
+  display: auto;
+}
+
+.container h1 {
+  font-size: 10rem;
+  color: #999;
+  text-align: left;
+  margin-bottom: 20px;
+  height: auto;
+}
+
+/* CreateEmployeeComponent Form Styles */
+.create-employee-form {
+  max-width: 600px;
+  margin: auto;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  display: fill;
+}
+
+.create-employee-form h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.create-employee-form label {
+  display: block;
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.create-employee-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+.create-employee-form input:focus {
+  border-color: #61dafb;
+  outline: none;
+}
+
+.create-employee-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #61dafb;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.create-employee-form button:hover {
+  background-color: #4b9fcc;
+}
+
+.create-employee-form button:focus {
+  outline: none;
+}
+
+.create-employee-form div {
+  margin-bottom: auto;
+}
+
+/* New Table Styles */
+.table-container {
+  margin: 20px auto;
+  max-width: 90%;
+  padding: 20px;
+  background-color: #f9f9f9;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  height: auto;
+  display: fill;
+}
+
+table {
+  width: flex;
+  border-collapse: collapse;
+  margin: 2px;
+  display:contents;
+}
+
+table th, table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table th {
+  background-color: #c4c3c3;
+  color: black;
+  font-weight: bold;
+}
+
+table tr {
+  background-color: #f2f2f2;
+}
+
+table tr:hover {
+  background-color: #e6e6e6;
+}
+
+table td {
+  font-size: 1rem;
+  color: #333;
+}
+
+table th, table td {
+  border-radius: 0px;
+}
+
+button {
+  padding: 8px 12px;
+  background-color: #61dafb;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #21a1f1;
+}
+
+/* Add these styles for pagination */
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.pagination-controls button {
+  margin: 0 10px;
+  padding: 8px 16px;
+  background-color: #61dafb;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pagination-controls button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.pagination-controls span {
+  font-size: 1rem;
+  margin: 0 10px;
+}
+
+/* Footer styles */
+.App-footer {
+  background-color: #282c34;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+.App-footer p {
+  margin: 0;
+  font-size: 1rem;
 }

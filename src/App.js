@@ -36,6 +36,9 @@ function App() {
           </div>
         </Router>
       </div>
+      <footer className="App-footer">
+        <p>&copy; 2024 Daniel Isangedighi. All rights reserved.</p>
+      </footer>
     </div>
   );
 }

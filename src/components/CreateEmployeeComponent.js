@@ -32,7 +32,7 @@ class CreateEmployeeComponent extends Component {
 
     render() {
         return (
-            <div>
+            <div className="create-employee-form">
                 <h2>Create Employee</h2>
                 <form>
                     <div>

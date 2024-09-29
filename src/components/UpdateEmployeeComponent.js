@@ -67,7 +67,7 @@ class UpdateEmployeeComponent extends Component {
         }
 
         return (
-            <div>
+            <div className="create-employee-form">
                 <h2>Update Employee</h2>
                 <form>
                     <div>
